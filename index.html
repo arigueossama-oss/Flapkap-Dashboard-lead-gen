@@ -12,7 +12,24 @@
 </head>
 <body>
 
-<main class="card">
+<section class="lock-card" id="lockCard" hidden>
+  <div class="logo">
+    <span class="logo-text">FlapKap</span>
+    <span class="logo-mark" aria-hidden="true">
+      <span class="teal"></span>
+      <span class="blue"></span>
+    </span>
+  </div>
+  <h1 class="lock-title">Lead generation portal</h1>
+  <p class="lock-sub">Enter the team password to open the request pipeline.</p>
+  <form id="lockForm">
+    <input type="password" id="passwordInput" placeholder="Password" aria-label="Portal password" autocomplete="current-password">
+    <p class="lock-error" id="lockError">&nbsp;</p>
+    <button type="submit" class="lock-btn">Open dashboard</button>
+  </form>
+</section>
+
+<main class="card" id="dashboardCard" hidden>
   <div class="card-head">
     <h1>Flapkap lead generation Dashboard</h1>
     <span class="logo" aria-label="FlapKap">
@@ -47,6 +64,7 @@
           <th>Request from</th>
           <th>Industry</th>
           <th>Specific request</th>
+          <th>BDR Data</th>
           <th>Time of request</th>
           <th>Request Link</th>
           <th>Time taken in request</th>
@@ -59,6 +77,7 @@
   <p class="note" id="note"></p>
 </main>
 
+<script src="data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
